@@ -1,4 +1,5 @@
 describe("Add remove elements",()  =>{
+
     it("Elements",() =>{
 
         cy.visit("https://the-internet.herokuapp.com/")
@@ -12,12 +13,5 @@ describe("Add remove elements",()  =>{
         cy.get("button").click()
 
         cy.get(".added-manually").click()
-
-
-
-    
-    
-    
-    
-    }) 
+ }) 
 })
