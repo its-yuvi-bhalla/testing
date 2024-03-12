@@ -7,11 +7,13 @@ describe("Challenging",() =>{
     
     cy.get("h3").should("contain","DOM")
     
-    cy.get('.button').click()
+    //cy.get(".button").click()
 
-    cy.get('.button alert').click()
+    cy.get(".button.alert").click()
 
-    cy.get('.button success').click()
+    cy.get(".button.success").click()
+
+   
     
     
     })
