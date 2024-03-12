@@ -7,7 +7,8 @@ describe("check boxes",() =>{
     
     cy.get("h3").should("not.contain","hi")
     
-    cy.get('[checked=""]').click()
+    cy.get('[checked=""]').click() 
+    
 
     cy.get('#checkboxes > :nth-child(1)').click()
     
