@@ -1,24 +1,18 @@
-describe("check boxes",() =>{
-    it("checkboxes",() =>{
-    
-    cy.visit("https://the-internet.herokuapp.com/")
-    
-    cy.get('[href="/checkboxes"]').click()
-    
-    cy.get("h3").should("not.contain","hi")
-    
-    cy.get('[checked=""]').click() 
-    
+import checkbox from '../../selectors/checkbox.json'
+describe('check boxes', () => {
+  it('checkboxes', () => {
+    cy.visit(checkbox.url)
 
-    cy.get('#checkboxes > :nth-child(1)').click()
-    
-    
-    }
-    
-    )
-    
-    
-    
-    }
-    
-    )
+    cy.get(checkbox.checkbox).click()
+
+    cy.get(checkbox.h3).should('not.contain', 'hi')
+
+    cy.get(checkbox.checkbox1).click()
+
+    cy.get(checkbox.checkbox2).click()
+  }
+
+  )
+}
+
+)

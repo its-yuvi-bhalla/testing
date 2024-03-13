@@ -1,28 +1,26 @@
-describe("Assertion",() => {
+import selectors from '../../selectors/selectors.json'
+describe('Assertion', () => {
+  it('verify assertion', () => {
+    cy.visit(selectors.url)
 
-it("verify assertion",() => {
+    cy.url().should('include', 'internet')
 
-cy.visit("https://the-internet.herokuapp.com/")
+    cy.url().should('eq', selectors.url)
 
-cy.url().should("include","internet")
+      .and('not.contain', 'hi')
 
-cy.url().should("eq","https://the-internet.herokuapp.com/")
+    cy.get(selectors.reachheading).should('contain', 'Welcome')
 
-.and("not.contain","hi")
+    cy.get(selectors.login).click()
 
-cy.get(".heading").should("contain","Welcome")
+    cy.get(selectors.username).type('tomsmith')
 
-cy.get('[href="/login"]').click()
+    cy.get(selectors.password).type('SuperSecretPassword!')
 
-cy.get("input#username").type("tomsmith")
+    cy.get(selectors.signin).click()
 
-cy.get("input#password").type("SuperSecretPassword!")
-
-cy.get(".fa-sign-in").click()
-
-cy.get(".icon-signout").click()
-
-}
-)
+    cy.get(selectors.signout).click()
+  }
+  )
 }
 )

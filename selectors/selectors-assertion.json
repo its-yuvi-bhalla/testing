@@ -1,0 +1,16 @@
+{
+    "reachheading": ".heading",
+    "notincluded": "not.contain",
+    "h3": "h3",
+    "firstNameInput": "[data-testid='first-name']",
+    "lastNameInput": "[data-testid='last-name']",
+    "login": "[href='/login']",
+    "url": "https://the-internet.herokuapp.com/",
+    "username": "input#username",
+    "password": "input#password",
+    "signin": ".fa-sign-in",
+    "signout": ".icon-signout"
+
+   
+    
+}

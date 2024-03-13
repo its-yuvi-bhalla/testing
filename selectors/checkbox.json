@@ -1,0 +1,13 @@
+{
+   "url": "https://the-internet.herokuapp.com/",
+   "checkbox": "[href='/checkboxes']",
+   "checkbox1": "[checked='']",
+   "checkbox2": "#checkboxes > :nth-child(1)",
+   "h3": "h3"
+   
+
+
+
+
+
+}
