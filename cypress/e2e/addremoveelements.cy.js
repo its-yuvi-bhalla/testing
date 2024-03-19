@@ -1,15 +1,16 @@
+import elements from '../../selectors/elements.json'
 describe('Add remove elements', () => {
   it('Elements', () => {
-    cy.visit('https://the-internet.herokuapp.com/')
+    cy.visit(elements.url)
 
-    cy.get('[href="/add_remove_elements/"]').click()
+    cy.get(elements.addremovelink).click()
 
-    cy.get('h3').should('contain', 'Elements')
+    cy.get(elements.h3).should(elements.contain, elements.elements)
 
-    cy.get('button').should('contain', 'Add')
+    cy.get(elements.button).should(elements.contain, elements.add)
 
-    cy.get('button').click()
+    cy.get(elements.button).click()
 
-    cy.get('.added-manually').click()
+    cy.get(elements.added).click()
   })
 })
